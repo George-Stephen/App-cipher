@@ -1,5 +1,5 @@
 import java.io.Console;
-import java.util.*;
+
 
 public class App {
     public static void main(String[] args) {
@@ -12,8 +12,9 @@ public class App {
         if (choice.equals("encrypt")) {
             System.out.println("Your encrypted data is :");
             String upperCLass = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            char space = ' ';
             String lowerClass = "abcdefghijklmnopqrstuvwxyz";
-            String special = "!@#$%^&*()?/<>,.+-";
+            String special = "!@#$%^&*()?/<>,.+- ";
             String numbers = "0123456789";
             for (int i = 0; i < data.length(); i++) {
                 for (int j = 0; j < 26; j++) {
@@ -21,7 +22,10 @@ public class App {
                         System.out.print(special.charAt(j));
                     } else if (j < numbers.length() && data.charAt(i) == numbers.charAt(j)) {
                         System.out.print(numbers.charAt(j));
-                    } else if (j < upperCLass.length() && data.charAt(i) == upperCLass.charAt(j)) {
+                    } else if (data.charAt(i) == space) {
+                        System.out.print(space);
+                    }
+                    else if (j < upperCLass.length() && data.charAt(i) == upperCLass.charAt(j)) {
                         System.out.print(upperCLass.charAt((j + 23) % 26));
                     } else if (j < lowerClass.length() && data.charAt(i) == lowerClass.charAt(j)) {
                         System.out.print(lowerClass.charAt((j + 23) % 26));
@@ -35,13 +39,17 @@ public class App {
             System.out.println("Your decrypted data is :");
             String upperCLass = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             String lowerClass = "abcdefghijklmnopqrstuvwxyz";
+            char space = ' ';
             String special = "!@#$%^&*()?/<>,.+-";
             String numbers = "0123456789";
             for (int i = 0; i < data.length(); i++) {
                 for (int j = 0; j < 26; j++) {
                     if (j < special.length() && data.charAt(i) == special.charAt(j)) {
                         System.out.print(special.charAt(j));
-                    } else if (j < numbers.length() && data.charAt(i) == numbers.charAt(j)) {
+                    }else if (data.charAt(i) == space) {
+                        System.out.print(space);
+                    }
+                    else if (j < numbers.length() && data.charAt(i) == numbers.charAt(j)) {
                         System.out.print(numbers.charAt(j));
                     } else if (j < upperCLass.length() && data.charAt(i) == upperCLass.charAt(j)) {
                         System.out.print(upperCLass.charAt((j + 3) % 26));
