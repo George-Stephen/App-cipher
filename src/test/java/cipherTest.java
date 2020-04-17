@@ -14,4 +14,8 @@ public class cipherTest {
         assertEquals("George Stephen",newData.getEntry());
 
     }
+    @Test
+    public void encrypt_cipher(){
+        cipher newData = new cipher("George Stephen");
+    }
 }
