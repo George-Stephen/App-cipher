@@ -31,6 +31,7 @@ public class App {
             System.out.println();
         }
         else if(choice.equals("decrypt")){
+            System.out.println("Your decrypted data is :");
             String upperCLass = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             String lowerClass = "abcdefghijklmnopqrstuvwxyz";
             String special = "!@#$%^&*()?/<>,.+-";
