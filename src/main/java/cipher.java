@@ -11,25 +11,14 @@ public class cipher {
     public String getEntry() {
         return this.entry;
     }
-    public String encrypt() {
-        String entryData = this.entry;
-        String upperCLass = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String lowerClass = "abcdefghijklmnopqrstuvwxyz";
-        String special = "!@#$%^&*()?/<>,.+-";
-        String numbers = "0123456789";
-        for( int i = 0;i<entryData.length();i++){
-            for(int j = 0; j<26;j++){
-                if( j<special.length() && entryData.charAt(i)==special.charAt(j)){
-                    System.out.print(special.charAt(j));
 
 
-                }
-
-            }
-
-        }
-
+    public int length() {
+        return this.entry.length();
     }
 
-
+    public char charAt(int i) {
+        return this.entry.charAt(i);
+    }
 }
+
