@@ -22,9 +22,9 @@ public class App {
                         System.out.print(special.charAt(j));
                     } else if (j < numbers.length() && data.charAt(i) == numbers.charAt(j)) {
                         System.out.print(numbers.charAt(j));
-                    } else if (data.charAt(i) == space) {
+                    } /*else if (data.charAt(i) == space) {
                         System.out.print(space);
-                    }
+                    }*/
                     else if (j < upperCLass.length() && data.charAt(i) == upperCLass.charAt(j)) {
                         System.out.print(upperCLass.charAt((j + 23) % 26));
                     } else if (j < lowerClass.length() && data.charAt(i) == lowerClass.charAt(j)) {
@@ -46,9 +46,9 @@ public class App {
                 for (int j = 0; j < 26; j++) {
                     if (j < special.length() && data.charAt(i) == special.charAt(j)) {
                         System.out.print(special.charAt(j));
-                    }else if (data.charAt(i) == space) {
+                    }/*else if (data.charAt(i) == space) {
                         System.out.print(space);
-                    }
+                    }*/
                     else if (j < numbers.length() && data.charAt(i) == numbers.charAt(j)) {
                         System.out.print(numbers.charAt(j));
                     } else if (j < upperCLass.length() && data.charAt(i) == upperCLass.charAt(j)) {
