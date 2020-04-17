@@ -9,6 +9,12 @@ public class cipherTest {
         assertEquals(true, newData instanceof cipher);
     }
     @Test
+    public void getString(){
+        cipher newData = new cipher("George Stephen");
+        assertEquals("George Stephen",newData.getEntry());
+
+    }
+    @Test
     public void obtain_cipher(){
         cipher newData = new cipher("George Stephen");
         assertEquals("George Stephen",newData.getEntry());
