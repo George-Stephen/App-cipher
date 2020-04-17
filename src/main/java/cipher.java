@@ -5,10 +5,12 @@ public class cipher {
 
 
     public cipher(String entry) {
+
         this.entry = entry;
     }
 
     public String getEntry() {
+
         return this.entry;
     }
 
