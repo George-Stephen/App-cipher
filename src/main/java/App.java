@@ -10,6 +10,7 @@ public class App {
         System.out.println("Would you like to encrypt or decrypt your file");
         String choice = myConsole.readLine();
         if (choice.equals("encrypt")) {
+            System.out.println("Your encrypted data is :");
             String upperCLass = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             String lowerClass = "abcdefghijklmnopqrstuvwxyz";
             String special = "!@#$%^&*()?/<>,.+-";
